@@ -1,4 +1,6 @@
-# various_programming_projects
-A compilation of all my personal coding projects
+# LCD alarm clock display from scratch with msp430G2553
+This is a project i completed on my own in PHYS 319 at UBC
 
-Here are various projects I have completed on my own.  Some were done in collaboration with other a couple other students in my Physics 410 class at UBC but the majority of the work in those was still done individually.  The projects range from physics simulations to predictive modeling with data science. I also built a functioning alarm clock with a msp430G2553 microcontroller.  All code is open to those who would like to use it.
+This project had a lot of little deatils that needed to be learned and addressed before completing.  The pinout structure of the LCD was read through the datasheets and figured out to be able to transmit data from the microcontroller to an output on the screen. The coding for this project turned out to be far more extensive than I originally thought it would but it was a fun experience. There was a lot of issues with the timing for writing to the screen which cause a lot of overlap between characters which "overloaded" the specific LCD cell and would generate a random charater.  The timing was later solved and the refresh rates were set to get a clean output.  I was able to get the full date and time to be generated cleanly and update all in sync.  That is, at the stroke of midnight, time, day, month, year were all reset and comtinued counting.  One thing I would have liked to do is use push bottons to control the display outside of programming in the microcontroller.  However suplies and time were fairly limited on this project so I worked with what I had used a piezoelectric buzzer to emit a buzz at a certain time which served as the alarm.
+
+The code can be used by others freely but if used, please cite my source as I have done within my project.
